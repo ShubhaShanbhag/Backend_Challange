@@ -1,0 +1,12 @@
+h1{
+    color:blue;
+    margin-left: 40px;
+    padding-top: 20px;
+    font-weight: 600;
+}
+*{
+    margin: 20px;
+}
+#err{
+    color: red;
+}

@@ -1,0 +1,25 @@
+<%- include ("./components/header") %>
+
+<div class="container">
+  <h1>Wel Come To Facebook</h1>
+  <a class="nav-link" href="./add-message">Post an article</a>
+<% if (result.length >0) { %>
+<p><%= result.create_at %></p>
+    <% result.forEach(element =>{ %>
+        <div class="card" style="width: 35rem;">
+            <div class="card-body">
+              <h5 class="card-title"> <%= element.name %> </h5>
+              <p class="card-text"> <%= element.message %> </p>
+              <h6 class="card-text"> <%= element.create_at %></h6>
+              <a href=/message/<%= element._id %> > See more </a>
+            </div>
+          </div>
+    </div>
+        
+        <% }); %>
+        <% } else { %>
+            There is no record
+            <% } %>
+    
+
+<%- include ("./components/footer") %>
